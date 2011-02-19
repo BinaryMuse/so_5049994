@@ -1,4 +1,7 @@
 OmniauthSandbox::Application.routes.draw do
+  get "auth/callback"
+
+  get "auth/:provider/callback" => "auth#callback"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
